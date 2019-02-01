@@ -1,0 +1,14 @@
+# タイムアウトまでの時間を決められる。
+# "1m 30s" と書けば1分30秒に、"2x"と書けばデフォルト設定の2倍になる。
+timeout: 10s
+
+# test() のtags引数に渡せるタグは、基本的にここで宣言したもののみ使用可能。
+tags:
+  takes_long_time:
+    skip: 実行時間が長すぎるので
+  fail:
+    skip: 絶対落ちるテストだから
+
+# 設定可能な項目はたくさんあるので、詳しくは公式のドキュメントを見てください。
+# Flutter開発には使用しないような項目もたくさんありますが…
+# https://github.com/dart-lang/test/blob/master/pkgs/test/doc/configuration.md
